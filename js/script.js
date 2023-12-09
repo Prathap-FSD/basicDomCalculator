@@ -142,9 +142,6 @@ document.addEventListener('keydown', function(event){
 
 })
 
-function appendToDisplay(value){
-    document.getElementById('result').value += value;
-}
 
 function cleanDisplay(){
     document.getElementById('result').value = '';
