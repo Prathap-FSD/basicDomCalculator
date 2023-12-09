@@ -108,7 +108,6 @@ btnsDiv.append(ttl)
 ttl.innerText = '='
 ttl.id = 'equal'
 ttl.setAttribute('class','ttl')
-ttl.setAttribute('onclick','calResu()')
 
 let zero  = document.createElement('button')
 btnsDiv.append(zero)
@@ -142,6 +141,9 @@ document.addEventListener('keydown', function(event){
 
 })
 
+function appendToDisplay(value){
+    document.getElementById('result').value += value;
+}
 
 function cleanDisplay(){
     document.getElementById('result').value = '';
@@ -158,7 +160,3 @@ function calcResult(){
 }
 
 
-function calResu() {
-            let res = eval(document.getElementById('result').value);
-            document.getElementById('result').value = res;
-        }
